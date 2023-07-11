@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/signing"
+            android:title="Loan Type"
+            />
+
+        <item
+            android:id="@+id/nav_Contactus"
+            android:icon="@drawable/gift"
+            android:title="Offer And Scheme For You"/>
+        <item
+            android:id="@+id/nav_connect"
+            android:icon="@drawable/connect"
+            android:title="Connect With Us"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/aboutus"
+            android:title="About Us"/>
+        <item
+            android:id="@+id/nav_buisnesspartner"
+            android:icon="@drawable/connection"
+            android:title="Become a Business Partner"/>
+        <item
+            android:id="@+id/nav_branchnetworking"
+            android:icon="@drawable/franchise"
+            android:title="Branch Networking"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout"/>
+    </group>
+</menu>

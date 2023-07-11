@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_screen2"
+    android:background="#F0FFFF"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="20dp">
@@ -21,28 +21,32 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/shapeemail"
-        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawableStart="@drawable/ic_person_black_24dp"
         android:drawablePadding="10dp"
         android:hint="Mobile Number"
         android:padding="15dp"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/white"
-        android:textColorHint="@color/white" />
+        android:textStyle="bold"
+        android:textColor="@color/media"
+        android:textColorHint="@color/media"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
         <CheckBox
+            android:id="@+id/term_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:buttonTint="@color/white"
-            android:checked="true"
+            android:buttonTint="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:text="Terms and Conditions"
-            android:textColor="@color/white" />
+            android:textColor="@color/media" />
+<!--
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +58,8 @@
             android:drawablePadding="6dp"
             android:padding="4dp"
             android:text="Forget Password"
-            android:textColor="@color/white" />
+            android:textColor="@color/dash_textcolor" />
+-->
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -62,13 +67,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/shapelogin"
         android:padding="15dp"
         android:shadowColor="@android:color/transparent"
-        android:text="Get Otp"/>
+        android:text="Get Otp"
+        android:textColor="@color/white"
+        android:textAlignment="center"/>
 
 
 </LinearLayout>

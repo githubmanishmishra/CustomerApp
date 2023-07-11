@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#F0FFFF"
     android:orientation="vertical"
     tools:context=".activity.activity.LoginActivity">
     <RelativeLayout
@@ -16,7 +16,7 @@
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/line"
-            android:backgroundTint="#3D0506" />
+            android:backgroundTint="#3D0506"/>
         <View
             android:id="@+id/second_line"
             android:layout_width="20dp"
@@ -64,8 +64,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/a"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/logo" />
 
@@ -75,42 +75,41 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="Laxmi Mitra Finance Pvt Ltd."
+            android:text="Laxmi India Finance Pvt Ltd."
             android:layout_below="@+id/a"
             android:textColor="#3D0506"
             android:textSize="26sp"
             app:fontFamily="cursive" />
 
-        <TextView
-            android:id="@+id/tagLine2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:text="Sapne Dekho Bade Dekho"
-            android:layout_below="@+id/tagLine"
-            android:textColor="#008000"
-            android:textSize="24sp"
-            app:fontFamily="cursive" />
-    </RelativeLayout>
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom">
+            android:layout_alignParentBottom="true">
 
             <TextView
-                android:id="@+id/tagLine"
+                android:id="@+id/tagLine2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="50dp"
-                android:text="Laxmi Mitra Finance Pvt Ltd."
-                android:textColor="#3D0506"
+                android:text="Sapne Dekho Bade Dekho"
+                android:textColor="#008000"
                 android:textSize="24sp"
-                app:fontFamily="cursive" />
+                app:fontFamily="@font/satisfy_regular" />
+
+            <TextView
+                android:id="@+id/tagLine3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Unhe Hamare sath Pura Hote Dekho"
+                android:textColor="#008000"
+                android:textSize="20sp"
+                android:layout_below="@+id/tagLine2"
+                android:layout_marginBottom="30dp"
+                app:fontFamily="@font/satisfy_regular"/>
         </RelativeLayout>
-    </LinearLayout>-->
+    </RelativeLayout>
 </LinearLayout>
+
+<!--
+FontStyle change kr lena.... dusra text color change kr lena tagline 2 aur 3 ka -->

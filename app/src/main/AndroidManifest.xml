@@ -14,7 +14,25 @@
         android:theme="@style/Theme.CustomerApp"
         tools:targetApi="31">
         <activity
-            android:name=".Dashboard_Customer"
+            android:name=".PayNow"
+            android:exported="false" />
+        <activity
+            android:name=".EmiSelection"
+            android:exported="false" />
+        <activity
+            android:name=".CurrentDues"
+            android:exported="false" />
+        <activity
+            android:name=".My_loan_info"
+            android:exported="false" />
+        <activity
+            android:name=".activity.New_loan_request"
+            android:exported="false" />
+        <activity
+            android:name=".activity.activity.Otp_Verify_Customer"
+            android:exported="false" />
+        <activity
+            android:name=".activity.activity.Dashboard_Customer"
             android:exported="false" />
         <activity
             android:name=".activity.activity.ChooseLanguageActivity"
@@ -34,6 +52,15 @@
         <activity
             android:name=".activity.activity.LoginActivity"
             android:exported="false" />
+
+        <receiver
+            android:name=".activity.sms_auto.MySMSBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
