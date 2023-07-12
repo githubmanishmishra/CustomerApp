@@ -1,195 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.activity.My_loan_info"
-    android:orientation="vertical"
-    android:background="@color/backgrouund">
-    <LinearLayout
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:background="#ffffff"
+        android:backgroundTint="@color/backgrouund"
+        android:elevation="10dp"
+        android:minHeight="48dp"
+        app:navigationIcon="@drawable/baseline_arrow_back_24">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/mo_me"
+            android:paddingBottom="5dp"
+            android:text="My Loan Info"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/logo" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="10dp"
-        android:padding="10dp">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/tv_loan_product"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/laxmi_india_finance_pvt_ltd" />
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Loan Product"
-        android:layout_weight="1"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:layout_margin="10dp"
+        app:cardCornerRadius="14dp">
 
-    <EditText
-        android:id="@+id/ev_loan_product"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_weight="1"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgrouund"
+            android:orientation="vertical"
+            tools:context=".activity.My_loan_info">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_loan_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Loan Product"
+                        android:fontFamily="@font/mo_re"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ev_loan_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_loan_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Loan Number"
+                        android:fontFamily="@font/mo_re"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ev_loan_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_disburse_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Disbursement Status"
+                        android:fontFamily="@font/mo_re"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ev_disburse_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_loan_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Loan Amount"
+                        android:fontFamily="@font/mo_re"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ev_loan_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_emi_paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Emi Paid"
+                        android:fontFamily="@font/mo_re"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ev_emi_paid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tenure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tenure"
+                        android:fontFamily="@font/mo_re"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ev_tenure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_due_emi_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Due Emi Date"
+                        android:fontFamily="@font/mo_re"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/ev_due_emi_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Okay"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shapelogin"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_loan_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Loan Number"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
-        <EditText
-            android:id="@+id/ev_loan_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_disburse_status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Disbursement Status"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
-        <EditText
-            android:id="@+id/ev_disburse_status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_loan_amount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Loan Amount"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
-        <EditText
-            android:id="@+id/ev_loan_amount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv_emi_paid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Total Emi Paid"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/ev_emi_paid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv_tenure"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tenure"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/ev_tenure"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv_due_emi_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Due Emi Date"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/ev_due_emi_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_weight="1"/>
-
-        </LinearLayout>
-<androidx.appcompat.widget.AppCompatButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:layout_marginTop="15dp"
-    android:text="Okay"
-    android:textStyle="bold"
-    android:layout_marginStart="30dp">
-</androidx.appcompat.widget.AppCompatButton>
-    </LinearLayout>
-</ScrollView>

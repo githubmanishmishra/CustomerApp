@@ -28,6 +28,8 @@
     <!-- dots active colors -->
     <color name="dot_light_screen1">#8de7f9</color>
     <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="appcolour">#ffffff</color>
+
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>
@@ -40,4 +42,7 @@
     </array>
 
     <color name="signupColor">#066e8a</color>
+
+    <color name="cardColor">#FF01BAEF</color>
+    <color name="textcardColor">#3f3f3f</color>
 </resources>

@@ -14,34 +14,10 @@
         android:theme="@style/Theme.CustomerApp"
         tools:targetApi="31">
         <activity
-            android:name=".PayNow"
+            android:name=".NoSchemeActivity"
             android:exported="false" />
         <activity
-            android:name=".EmiSelection"
-            android:exported="false" />
-        <activity
-            android:name=".CurrentDues"
-            android:exported="false" />
-        <activity
-            android:name=".My_loan_info"
-            android:exported="false" />
-        <activity
-            android:name=".activity.New_loan_request"
-            android:exported="false" />
-        <activity
-            android:name=".activity.activity.Otp_Verify_Customer"
-            android:exported="false" />
-        <activity
-            android:name=".activity.activity.Dashboard_Customer"
-            android:exported="false" />
-        <activity
-            android:name=".activity.activity.ChooseLanguageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.activity.IntroductionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.activity.SplashScreen"
+            android:name=".activity.OfferAndSchemeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,11 +26,44 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.activity.LoginActivity"
+            android:name=".activity.ConnectWithUs"
+            android:exported="true"></activity>
+        <activity
+            android:name=".activity.PayNow"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EmiSelection"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CurrentDues"
+            android:exported="false" />
+        <activity
+            android:name=".activity.My_loan_info"
+            android:exported="false" />
+        <activity
+            android:name=".New_loan_request"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Otp_Verify_Customer"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Dashboard_Customer"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ChooseLanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.IntroductionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SplashScreen"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LoginActivity"
             android:exported="false" />
 
         <receiver
-            android:name=".activity.sms_auto.MySMSBroadcastReceiver"
+            android:name=".sms_auto.MySMSBroadcastReceiver"
             android:exported="true"
             android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
             <intent-filter>

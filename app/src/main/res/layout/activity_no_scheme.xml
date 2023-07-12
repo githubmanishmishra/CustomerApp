@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/the_slider_background"
+    tools:context=".activity.OfferAndSchemeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:minHeight="48dp"
+        android:elevation="10dp"
+        android:backgroundTint="@color/backgrouund"
+        app:navigationIcon="@drawable/baseline_arrow_back_24" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offer And Scheme For You"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mo_me"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/logo"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/laxmi_india_finance_pvt_ltd"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-8dp"
+        android:background="@drawable/sub_title"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/offers_and_scheme_for_you"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:paddingStart="50dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/emoji1_left"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/emoji1"/>
+
+        <ImageView
+            android:id="@+id/sorry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/emoji1_left"
+            android:layout_margin="20dp"
+            android:src="@drawable/sorry_for_you"/>
+
+        <ImageView
+            android:id="@+id/emoji2_left"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toEndOf="@+id/sorry"
+            android:src="@drawable/emoji1"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/emoji3_left"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/emoji2"/>
+
+        <ImageView
+            android:id="@+id/better_luck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@id/emoji3_left"
+            android:src="@drawable/better_luck_next_time" />
+
+        <ImageView
+            android:id="@+id/emoji4_left"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toEndOf="@+id/better_luck"
+            android:src="@drawable/emoji2"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

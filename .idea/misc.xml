@@ -14,6 +14,29 @@
         <entry key="..\:/Users/ASUS/CustomerApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.24074074074074073" />
         <entry key="..\:/Users/ASUS/CustomerApp/app/src/main/res/layout/welcome_slide1.xml" value="0.24074074074074073" />
         <entry key="..\:/Users/ASUS/CustomerApp/app/src/main/res/layout/welcome_slide2.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/default_indicator.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/ic_baseline_person_pin_circle_24.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/ic_bg_topheader.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/ic_course_book.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/indicator_selector.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/selected_indicator.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/drawable/the_slider_background.xml" value="0.124" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_choose_language.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_connect_with_us.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_current_dues.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_dashboard_customer.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_emi_selection.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_introduction.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_login.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_my_loan_info.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_new_loan_request.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_no_scheme.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_offer_and_scheme.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_otp_verify_customer.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/activity_pay_now.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/ASUS/Documents/CustomerApp/app/src/main/res/layout/items_layout.xml" value="0.20168776371308017" />
       </map>
     </option>
   </component>

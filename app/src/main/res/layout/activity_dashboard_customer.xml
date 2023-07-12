@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activity.activity.Dashboard_Customer">
+    tools:context=".activity.Dashboard_Customer">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -40,6 +40,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

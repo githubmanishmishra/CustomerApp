@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.activity.Otp_Verify_Customer"
+    tools:context=".activity.Otp_Verify_Customer"
     android:background="@color/backgrouund">
     <LinearLayout
         android:layout_width="match_parent"
