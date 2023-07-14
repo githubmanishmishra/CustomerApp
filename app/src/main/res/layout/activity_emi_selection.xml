@@ -13,8 +13,14 @@
         android:background="#ffffff"
         android:backgroundTint="@color/dash_color"
         android:elevation="12dp"
-        android:minHeight="48dp"
-        app:navigationIcon="@drawable/baseline_arrow_back_24">
+        android:minHeight="48dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:tint="@color/white"/>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -102,7 +108,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Recived Amount"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -127,7 +132,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Hire Money(Emi)"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -152,7 +156,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Lpc"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -177,7 +180,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Checque Bounce"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -202,7 +204,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Legal"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -227,7 +228,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Repossess"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -253,7 +253,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Statement Charges"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -279,7 +278,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Part Payment Intrest"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -305,8 +303,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
-                        android:text="Collection Charges"
+                       android:text="Collection Charges"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -331,7 +328,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="Other"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -357,7 +353,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/mo_re"
                         android:text="payment By"
                         android:textSize="16sp"
                         android:textStyle="bold" />

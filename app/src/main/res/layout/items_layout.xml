@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/backgrouund">
 
     <ImageView
         tools:ignore="ContentDescription,MissingConstraints"
@@ -24,7 +25,7 @@
         android:id="@+id/my_caption_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The Caption Title"
+        android:text="@string/the_caption_title"
         android:textColor="#ffffff"
         android:textSize="26sp"
         tools:layout_editor_absoluteX="91dp"

@@ -3,36 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_1">
+
         <item
             android:id="@+id/nav_loantype"
             android:icon="@drawable/signing"
             android:title="Loan Type"
             />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
 
         <item
             android:id="@+id/nav_offerandscheme"
             android:icon="@drawable/gift"
             android:title="Offer And Scheme For You"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
         <item
             android:id="@+id/nav_connect"
             android:icon="@drawable/connect"
             android:title="Connect With Us"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group4">
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/aboutus"
             android:title="About Us"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group5">
         <item
             android:id="@+id/nav_buisnesspartner"
             android:icon="@drawable/connection"
             android:title="Become a Business Partner"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group6">
         <item
             android:id="@+id/nav_branchnetworking"
             android:icon="@drawable/franchise"
             android:title="Branch Networking"/>
+    </group>
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout"
             android:title="Logout"/>
-    </group>
+
 </menu>
