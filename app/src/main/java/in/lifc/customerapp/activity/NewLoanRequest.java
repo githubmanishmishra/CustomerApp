@@ -1,4 +1,4 @@
-package in.lifc.customerapp;
+package in.lifc.customerapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import in.lifc.customerapp.R;
 
-public class New_loan_request extends AppCompatActivity {
+public class NewLoanRequest extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

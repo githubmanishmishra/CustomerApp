@@ -14,20 +14,29 @@
         android:theme="@style/Theme.CustomerApp"
         tools:targetApi="31">
         <activity
-            android:name=".NoSchemeActivity"
+            android:name=".activity.Aboutus"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Service_request"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Nearest_branch"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Loan_type"
+            android:exported="false" />
+        <activity
+            android:name=".activity.NewLoanRequest"
+            android:exported="false" />
+        <activity
+            android:name=".activity.NoSchemeActivity"
             android:exported="false" />
         <activity
             android:name=".activity.OfferAndSchemeActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".activity.ConnectWithUs"
-            android:exported="true"></activity>
+            android:exported="false" />
         <activity
             android:name=".activity.PayNow"
             android:exported="false" />
@@ -39,9 +48,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.My_loan_info"
-            android:exported="false" />
-        <activity
-            android:name=".New_loan_request"
             android:exported="false" />
         <activity
             android:name=".activity.Otp_Verify_Customer"
@@ -57,7 +63,13 @@
             android:exported="false" />
         <activity
             android:name=".activity.SplashScreen"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.LoginActivity"
             android:exported="false" />

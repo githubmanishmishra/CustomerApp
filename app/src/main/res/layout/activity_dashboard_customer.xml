@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/backgrouund"
     tools:context=".activity.Dashboard_Customer">
 
     <com.google.android.material.navigation.NavigationView
@@ -32,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center"
-                android:src="@drawable/logo" />
+                android:src="@drawable/logo"/>
         </LinearLayout>
 
     </com.google.android.material.navigation.NavigationView>
@@ -105,6 +106,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/new_loan_request"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -139,6 +141,7 @@
             </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_my_loan_info"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -181,8 +184,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_nearest_branch"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -259,6 +262,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_current_dues"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -291,6 +295,7 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_service_request"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"

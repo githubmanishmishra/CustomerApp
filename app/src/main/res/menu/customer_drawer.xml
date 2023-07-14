@@ -5,13 +5,13 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_loantype"
             android:icon="@drawable/signing"
             android:title="Loan Type"
             />
 
         <item
-            android:id="@+id/nav_Contactus"
+            android:id="@+id/nav_offerandscheme"
             android:icon="@drawable/gift"
             android:title="Offer And Scheme For You"/>
         <item
