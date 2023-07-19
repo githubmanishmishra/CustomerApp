@@ -13,7 +13,7 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/dash_color">
+            android:background="@drawable/gradientmixcolor">
             <ImageView
                 android:id="@+id/iv_back"
                 android:layout_width="30dp"
@@ -74,6 +74,7 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/shapeemail"
                 android:maxLength="1"
+                android:textAlignment="center"
                 android:inputType="number"/>
 
             <EditText
@@ -81,24 +82,45 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
+                android:textAlignment="center"
                 android:background="@drawable/shapeemail"
                 android:inputType="number"
                 android:maxLength="1"/>
-
-            <EditText
-                android:id="@+id/edittext_otp4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:inputType="number"
-                android:background="@drawable/shapeemail"
-                android:maxLength="1" />
 
             <EditText
                 android:id="@+id/edittext_otp3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/shapeemail"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/edittext_otp4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/shapeemail"
+                android:inputType="number"
+                android:maxLength="1" />
+            <EditText
+                android:id="@+id/edittext_otp5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:textAlignment="center"
+                android:background="@drawable/shapeemail"
+                android:inputType="number"
+                android:maxLength="1" />
+            <EditText
+                android:id="@+id/edittext_otp6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:textAlignment="center"
                 android:background="@drawable/shapeemail"
                 android:inputType="number"
                 android:maxLength="1" />

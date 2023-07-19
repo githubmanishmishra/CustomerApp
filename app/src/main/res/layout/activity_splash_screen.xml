@@ -77,9 +77,9 @@
             android:layout_marginTop="20dp"
             android:text="Laxmi India Finance Pvt Ltd."
             android:layout_below="@+id/a"
-            android:textColor="#3D0506"
+            android:textColor="@color/black"
             android:textSize="26sp"
-            app:fontFamily="cursive" />
+            app:fontFamily="ariel" />
 
         <RelativeLayout
             android:layout_width="match_parent"

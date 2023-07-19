@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
+
 import in.lifc.customerapp.R;
 public class Dashboard_Customer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbars;
@@ -21,6 +22,7 @@ public class Dashboard_Customer extends AppCompatActivity implements NavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_customer);
+
         drawerLayout = findViewById(R.id.drawer_layout);
         toolbars = findViewById(R.id.toolbar);
         navigationView = findViewById(R.id.nav_view);
@@ -60,6 +62,14 @@ public class Dashboard_Customer extends AppCompatActivity implements NavigationV
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Dashboard_Customer.this, CurrentDues.class);
+                startActivity(intent);
+            }
+        });
+        CardView cv_Clculator  = findViewById(R.id.cv_calculator);
+        cv_Clculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Dashboard_Customer.this, EmiCalculator.class);
                 startActivity(intent);
             }
         });

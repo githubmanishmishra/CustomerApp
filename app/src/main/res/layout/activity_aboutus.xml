@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,21 +7,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activity.Aboutus">
-
-
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/dash_color"
+        android:background="@drawable/gradientmixcolor"
         android:elevation="10dp"
         android:minHeight="48dp">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +27,7 @@
             android:text="About Us"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
         <ImageView
             android:id="@+id/iv_back"
             android:layout_width="30dp"
@@ -40,14 +35,12 @@
             android:src="@drawable/baseline_arrow_back_24"
             app:tint="@color/white"/>
     </androidx.appcompat.widget.Toolbar>
-
     <ImageView
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:background="@drawable/logo" />
-
+        android:background="@drawable/logo"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,8 +48,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
+        android:backgroundTint="#F61932"
         android:background="@drawable/laxmi_india_finance_pvt_ltd" />
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -64,15 +57,12 @@
         android:background="@color/dash_color"
         android:elevation="14dp"
         app:cardCornerRadius="16dp">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="A reputed Non-Banking Finance Company built with the vision of making the process of providing loan and advances easy and robust.
-
-             Our experience make us efficient in providing faster credit delivery and has a vast reach.
-We will do everything to gain and maintain the Trust of all the stakeholders and will not do anything to lose their trust.. LIFPL aim to be the most trusted financial service provider, at the doorstep of the common man, satisfying him immediately with easy and simple products nurturing aspirations and making demonstrable difference to the subsists of people forming our ecosystem."
-            android:textSize="18sp"
+            android:text="@string/a_reputed_non_banking_finance_company_built_with_the_vision_of_making_the_process_of_providing_loan_and_advances_easy_and_robust_our_experience_make_us_efficient_in_providing_faster_credit_delivery_and_has_a_vast_reach_we_will_do_everything_to_gain_and_maintain_the_trust_of_all_the_stakeholders_and_will_not_do_anything_to_lose_their_trust_lifpl_aim_to_be_the_most_trusted_financial_service_provider_at_the_doorstep_of_the_common_man_satisfying_him_immediately_with_easy_and_simple_products_nurturing_aspirations_and_making_demonstrable_difference_to_the_subsists_of_people_forming_our_ecosystem"
+            android:textSize="14sp"
+            android:padding="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
     </androidx.cardview.widget.CardView>

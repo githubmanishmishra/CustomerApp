@@ -10,8 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:backgroundTint="@color/dash_color"
+        android:background="@drawable/gradientmixcolor"
         android:elevation="10dp"
         android:minHeight="48dp">
         <ImageView
@@ -93,8 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
-
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 

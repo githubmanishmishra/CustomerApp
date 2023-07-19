@@ -16,5 +16,11 @@
     <string name="verify">Verify</string>
     <string name="note_now_we_have_changed_our_name_from_laxmi_india_finlease_cap_private_limited_to_laxmi_india_finance_private_limited_w_e_f_10th_march_2023"><b>Note</b> - Now we have changed our name from LAXMI INDIA FINLEASE CAP PRIVATE LIMITED to LAXMI INDIA FINANCE PRIVATE LIMITED (w.e.f 10th March 2023).</string>
     <string name="the_caption_title">The Caption Title</string>
+    <string name="a_reputed_non_banking_finance_company_built_with_the_vision_of_making_the_process_of_providing_loan_and_advances_easy_and_robust_our_experience_make_us_efficient_in_providing_faster_credit_delivery_and_has_a_vast_reach_we_will_do_everything_to_gain_and_maintain_the_trust_of_all_the_stakeholders_and_will_not_do_anything_to_lose_their_trust_lifpl_aim_to_be_the_most_trusted_financial_service_provider_at_the_doorstep_of_the_common_man_satisfying_him_immediately_with_easy_and_simple_products_nurturing_aspirations_and_making_demonstrable_difference_to_the_subsists_of_people_forming_our_ecosystem">A reputed Non-Banking Finance Company built with the vision of making the process of providing loan and advances easy and robust. Our experience make us efficient in providing faster credit delivery and has a vast reach. We will do everything to gain and maintain the Trust of all the stakeholders and will not do anything to lose their trust.. LIFPL aim to be the most trusted financial service provider, at the doorstep of the common man, satisfying him immediately with easy and simple products nurturing aspirations and making demonstrable difference to the subsists of people forming our ecosystem.</string>
+    <string name="term_and_condition"><u>Term And Condition</u></string>
+
+    <string name="pref_file">in.lifc.customerapp.preference_file</string>
+    <string name="pref_login_status">in.lifc.customerapp.preference_login_status</string>
+    <string name="pref_token">in.lifc.customerapp.preference_token</string>
 
 </resources>

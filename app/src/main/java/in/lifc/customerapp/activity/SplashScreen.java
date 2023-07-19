@@ -22,7 +22,6 @@ public class SplashScreen extends AppCompatActivity {
     //Animations
     Animation topAnimantion, bottomAnimation, middleAnimation;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

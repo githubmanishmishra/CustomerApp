@@ -16,7 +16,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/the_slider_background"
+        app:srcCompat="@drawable/gradientmixcolor"
         app:layout_constraintBottom_toBottomOf="@+id/my_featured_image"
         tools:ignore="ContentDescription"
         android:id="@+id/slider_background"/>
