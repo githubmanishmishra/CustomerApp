@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/satisfy_regular"
+                android:fontFamily="@font/arial"
                 android:paddingBottom="5dp"
                 android:text="Enter Otp"
                 android:textColor="@color/white"
@@ -56,7 +56,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Otp Sent to Your\n84xxxxxxx"
+            android:text="Enter Otp Sent to Your\n mobile"
             android:textAlignment="center"
             android:textSize="16sp"/>
 

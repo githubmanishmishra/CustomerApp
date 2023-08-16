@@ -18,9 +18,12 @@ public class ConnectWithUs extends AppCompatActivity {
         ImageView iv_back = findViewById(R.id.back);
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 finish();
+
             }
         });
+
 }
 }

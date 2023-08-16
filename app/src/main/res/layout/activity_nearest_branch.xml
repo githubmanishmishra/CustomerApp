@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/satisfy_regular"
+            android:fontFamily="@font/arial"
             android:paddingBottom="5dp"
             android:text="Nearest Branch"
             android:textColor="@color/white"
@@ -42,6 +42,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/logo" />
 
+<!--
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,14 +51,16 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/laxmi_india_finance_pvt_ltd" />
+-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nearest Branch"
         android:textStyle="bold"
         android:textSize="22sp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
-        android:textColor="@color/media"/>
+        android:textColor="@color/usecolor"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,7 +80,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:orientation="vertical"
-                android:background="@color/bg_mainactivity"
+                android:background="@color/backgrouund"
                 android:padding="10dp">
                 <TextView
                     android:layout_width="match_parent"

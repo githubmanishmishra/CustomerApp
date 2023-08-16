@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/satisfy_regular"
+            android:fontFamily="@font/arial"
             android:paddingBottom="5dp"
             android:text="Service Type"
             android:textColor="@color/white"
@@ -42,6 +42,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/logo" />
 
+<!--
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +51,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/laxmi_india_finance_pvt_ltd" />
+-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -89,7 +91,8 @@
                         android:layout_height="wrap_content"
                         android:text="Request Type"
                         android:layout_weight="1"/>
-                    <EditText
+                    <Spinner
+                        android:id="@+id/spservicetype"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>

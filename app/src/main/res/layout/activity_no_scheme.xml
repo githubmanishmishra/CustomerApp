@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="Offer And Scheme For You"
             android:textColor="@color/white"
-            android:fontFamily="@font/satisfy_regular"
+            android:fontFamily="@font/arial"
             android:textSize="18sp"
             android:layout_gravity="center"
             android:paddingBottom="5dp"
@@ -43,6 +43,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/logo"/>
 
+<!--
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,6 +52,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/laxmi_india_finance_pvt_ltd"/>
+-->
+<!--
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="15dp"
@@ -59,6 +62,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="-8dp"
         android:background="@drawable/sub_title"/>
+-->
 
     <ImageView
         android:layout_width="wrap_content"

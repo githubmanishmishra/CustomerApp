@@ -3,6 +3,8 @@ package in.lifc.customerapp.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class MyLoanInfoModel {
 
     @SerializedName("status")
@@ -13,7 +15,7 @@ public class MyLoanInfoModel {
     private String message;
     @SerializedName("data")
     @Expose
-    private Data data;
+    private List<Datum> data;
 
     public Boolean getStatus() {
         return status;
@@ -31,16 +33,15 @@ public class MyLoanInfoModel {
         this.message = message;
     }
 
-    public Data getData() {
+    public List<Datum> getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(List<Datum> data) {
         this.data = data;
     }
 
-
-    public class Data {
+    public class Datum {
 
         @SerializedName("loanId")
         @Expose
@@ -143,4 +144,5 @@ public class MyLoanInfoModel {
         }
 
     }
+
 }

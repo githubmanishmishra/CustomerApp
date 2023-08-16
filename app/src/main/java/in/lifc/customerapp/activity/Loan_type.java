@@ -35,6 +35,8 @@ public class Loan_type extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loan_type);
+        prefConfig = new PrefConfig(this);
+
         ImageView iv_back = findViewById(R.id.back);
 
         recyclerView = findViewById(R.id.rv_loan_type);
@@ -50,8 +52,6 @@ public class Loan_type extends AppCompatActivity {
                 finish();
             }
         });
-        prefConfig = new PrefConfig(this);
-
         getLoanType();
 
     }

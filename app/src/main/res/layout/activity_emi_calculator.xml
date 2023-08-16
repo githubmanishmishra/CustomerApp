@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/satisfy_regular"
+            android:fontFamily="@font/arial"
             android:paddingBottom="5dp"
             android:text="Emi Calculator"
             android:textColor="@color/white"
@@ -34,6 +34,16 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingBottom="80dp"
+        android:gravity="center">
+
+
+
     <ImageView
         android:layout_width="110dp"
         android:layout_height="100dp"
@@ -41,7 +51,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/logo" />
 
-    <ImageView
+   <!-- <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -49,7 +59,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/laxmi_india_finance_pvt_ltd" />
-
+-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -122,13 +132,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
+                    android:layout_margin="15dp"
+                        android:padding="10dp"
                     android:text="Calculate"
                     android:textColor="@color/white"
                     android:background="@drawable/shapelogin"
+                        android:backgroundTint="@color/usecolor"
                     android:textStyle="bold"/>
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </LinearLayout>

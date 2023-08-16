@@ -133,8 +133,10 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                         else {
-                            checkBox.setText( "Please Accept this!");
-                            checkBox.setTextColor(Color.parseColor("#FF0000"));
+                          //  checkBox.setText( "Please Accept Term & Condition!");
+                         //   checkBox.setTextColor(Color.parseColor("#FF0000"));
+                            Toast.makeText(LoginActivity.this, "Please Accept Term & Condition!", Toast.LENGTH_SHORT).show();
+
                         }
 
 

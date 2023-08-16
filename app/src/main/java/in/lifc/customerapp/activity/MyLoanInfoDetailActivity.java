@@ -3,20 +3,18 @@ package in.lifc.customerapp.activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import in.lifc.customerapp.R;
-import in.lifc.customerapp.adapters.MyLoanInfoAdapter;
 import in.lifc.customerapp.model.MyLoanInfoModel;
 import in.lifc.customerapp.retrofitservices.ApiClient;
 import in.lifc.customerapp.retrofitservices.ApiService;
@@ -24,28 +22,28 @@ import in.lifc.customerapp.savedata.PrefConfig;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class My_loan_info extends AppCompatActivity {
+public class MyLoanInfoDetailActivity extends AppCompatActivity {
+    private TextView etLoanProduct, etLoanNumber, etDisbursementStatus, etLoanAmount,
+            etTotalEmiPaid, etTenure, etDueEmiDate;
     private PrefConfig prefConfig;
+
     List<MyLoanInfoModel.Datum> myLoanInfoModelList = new ArrayList<>();
-    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_loan_info);
+        setContentView(R.layout.activity_my_loan_info_detail);
 
         prefConfig = new PrefConfig(this);
-
-        recyclerView = findViewById(R.id.rv_loan_info);
-        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(My_loan_info.this, LinearLayoutManager.VERTICAL, false);
-        recyclerView.addItemDecoration(new DividerItemDecoration(My_loan_info.this, DividerItemDecoration.VERTICAL));
-        mLinearLayoutManager.setReverseLayout(true);
-        mLinearLayoutManager.setStackFromEnd(true);
-        recyclerView.setLayoutManager(mLinearLayoutManager);
         ImageView iv_back = findViewById(R.id.iv_back);
-
-        getLoanInfo();
-
+        getLoanType();
+        etLoanProduct = findViewById(R.id.ev_loan_product);
+        etLoanNumber = findViewById(R.id.ev_loan_number);
+        etDisbursementStatus = findViewById(R.id.ev_disburse_status);
+        etLoanAmount = findViewById(R.id.ev_loan_amount);
+        etTotalEmiPaid = findViewById(R.id.ev_emi_paid);
+        etTenure = findViewById(R.id.ev_tenure);
+        etDueEmiDate = findViewById(R.id.ev_due_emi_date);
 
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +54,7 @@ public class My_loan_info extends AppCompatActivity {
 
     }
 
-    private void getLoanInfo() {
+    private void getLoanType() {
         ApiService service = ApiClient.getClient().create(ApiService.class);
         Call<MyLoanInfoModel> call = service.getLoanInfo("Bearer " + prefConfig.readToken());
         call.enqueue(new Callback<MyLoanInfoModel>() {
@@ -69,13 +67,8 @@ public class My_loan_info extends AppCompatActivity {
                         myLoanInfoModelList = allEvent.getData();
 
                     }
-
-                    MyLoanInfoAdapter mMailAdapter = new MyLoanInfoAdapter(myLoanInfoModelList);
-                    recyclerView.setAdapter(mMailAdapter);
-                }
-                else
-                {
-                    Toast.makeText(My_loan_info.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MyLoanInfoDetailActivity.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -85,7 +78,7 @@ public class My_loan_info extends AppCompatActivity {
             public void onFailure(@NonNull Call<MyLoanInfoModel> call, @NonNull Throwable t) {
 
                 // pDialog.dismiss();
-                Log.d("Error>>>>>>>>>>>>>", t.getMessage());
+                Log.d("Error", t.getMessage());
             }
         });
     }

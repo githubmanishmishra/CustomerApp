@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/satisfy_regular"
+            android:fontFamily="@font/arial"
             android:paddingBottom="5dp"
             android:text="Emi Selection"
             android:textColor="@color/white"
@@ -41,6 +41,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/logo" />
 
+<!--
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +50,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/laxmi_india_finance_pvt_ltd" />
+-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -140,11 +142,12 @@
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/ev_loan_amount"
+                        android:id="@+id/et_loan_amount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textSize="16sp"
+                        android:inputType="number"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -165,11 +168,12 @@
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/ev_tenure"
+                        android:id="@+id/et_tenure"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textSize="16sp"
+                        android:inputType="number"
                         android:textStyle="bold"/>
                 </LinearLayout>
 
@@ -190,7 +194,7 @@
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/ev_purpose_of_loan"
+                        android:id="@+id/et_purpose_of_loan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -224,6 +228,7 @@
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_apply"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

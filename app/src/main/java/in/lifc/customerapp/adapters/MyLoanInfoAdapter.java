@@ -1,41 +1,37 @@
 package in.lifc.customerapp.adapters;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import in.lifc.customerapp.R;
 import in.lifc.customerapp.model.LoanTypeModel;
+import in.lifc.customerapp.model.MyLoanInfoModel;
 
+public class MyLoanInfoAdapter extends RecyclerView.Adapter<MyLoanInfoAdapter.ViewHolder> {
+    private final List<MyLoanInfoModel.Datum> dataList;
 
-public class LoanTypeAdapter extends RecyclerView.Adapter<LoanTypeAdapter.ViewHolder> {
-
-    private final List<LoanTypeModel.Data> dataList;
-
-    public LoanTypeAdapter(List<LoanTypeModel.Data> dataList) {
+    public MyLoanInfoAdapter(List<MyLoanInfoModel.Datum> dataList) {
         this.dataList = dataList;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.loan_typerecycle, parent, false);
+    public MyLoanInfoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.myloaninfolist, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        LoanTypeModel.Data dataItem = dataList.get(position);
-
-      //  holder.titleTextView.setText(dataItem.getTitle());
-        holder.btn_PersonalLoan.setText(dataItem.getProductName());
+    public void onBindViewHolder(@NonNull MyLoanInfoAdapter.ViewHolder holder, int position) {
+        MyLoanInfoModel.Datum dataItem = dataList.get(position);
+        holder.btn_PersonalLoan.setText(dataItem.getProduct());
     }
 
     @Override
@@ -51,5 +47,5 @@ public class LoanTypeAdapter extends RecyclerView.Adapter<LoanTypeAdapter.ViewHo
             btn_PersonalLoan = itemView.findViewById(R.id.loan_aganist_property);
         }
     }
-}
 
+}

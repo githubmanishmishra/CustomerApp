@@ -22,13 +22,15 @@ public class CurrentDues extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+
             }
         });
         btn_Emiselection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CurrentDues.this,EmiSelection.class);
+                Intent intent = new Intent(CurrentDues.this,PayNow.class);
                 startActivity(intent);
             }
-        });}
+        });
+    }
 }

@@ -94,7 +94,7 @@
                 android:text="Sapne Dekho Bade Dekho"
                 android:textColor="#008000"
                 android:textSize="24sp"
-                app:fontFamily="@font/satisfy_regular" />
+                app:fontFamily="@font/arial" />
 
             <TextView
                 android:id="@+id/tagLine3"
@@ -106,7 +106,7 @@
                 android:textSize="20sp"
                 android:layout_below="@+id/tagLine2"
                 android:layout_marginBottom="30dp"
-                app:fontFamily="@font/satisfy_regular"/>
+                app:fontFamily="@font/arial"/>
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>

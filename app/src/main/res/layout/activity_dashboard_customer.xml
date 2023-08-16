@@ -42,295 +42,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-       <!-- <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:navigationIcon="@drawable/baseline_menu_24" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:text="Hey Manish"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:text="Welcome"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:src="@drawable/person"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="0dp"
-                android:layout_height="175dp"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/new_loan_request"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="24dp"
-                    app:cardMaxElevation="12dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient">
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/bus"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
-                            android:text="New Loan Request"
-                            android:textColor="@color/dash_textcolor"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:id="@+id/bus"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            android:src="@drawable/dash1" />
-                    </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_my_loan_info"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="32dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradient">
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/imageView3"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
-                            android:text="My Loan Info"
-                            android:textColor="@color/dash_textcolor"
-                            android:textSize="18sp" />
-
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/dash2" />
-                    </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="0dp"
-            android:layout_height="175dp"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_nearest_branch"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                app:cardCornerRadius="32dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient">
-
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/bus1"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:text="Nearest Branch"
-                        android:textColor="@color/dash_textcolor"
-                        android:textSize="18sp" />
-
-                    <ImageView
-                        android:id="@+id/bus1"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
-                        app:srcCompat="@drawable/google_maps" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                app:cardCornerRadius="32dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient">
-
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/train"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:text="Emi Calculator"
-                        android:textColor="@color/dash_textcolor"
-                        android:textSize="18sp" />
-
-                    <ImageView
-                        android:id="@+id/train"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
-                        app:srcCompat="@drawable/calculator"/>
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="175dp"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_current_dues"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                app:cardCornerRadius="32dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient">
-
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cycle"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:text="Current Dues"
-                        android:textColor="@color/dash_textcolor"
-                        android:textSize="18sp" />
-
-                    <ImageView
-                        android:id="@+id/cycle"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
-                        app:srcCompat="@drawable/hand"/>
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_service_request"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="32dp"
-                android:layout_weight="1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/airplane"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:text="Service Request"
-                        android:textColor="@color/dash_textcolor"
-                        android:textSize="18sp" />
-
-                    <ImageView
-                        android:id="@+id/airplane"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
-                        app:srcCompat="@drawable/dash8" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
         <androidx.constraintlayout.widget.ConstraintLayout 
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -430,7 +141,7 @@
 
                         <ImageView
                             android:layout_width="80dp"
-                            android:layout_height="50dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center_horizontal"
                             android:background="@drawable/personal"/>
 
@@ -438,8 +149,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="New Loan Request"
-                            android:layout_marginTop="10dp"
-                            android:fontFamily="@font/mo_re"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/arial"
                             android:textColor="@color/textcardColor"
                             android:textSize="12sp"
                             android:textStyle="bold"/>
@@ -470,7 +181,7 @@
 
                         <ImageView
                             android:layout_width="80dp"
-                            android:layout_height="50dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center_horizontal"
                             android:background="@drawable/information"/>
 
@@ -480,8 +191,8 @@
                             android:text="My Loan Infoo"
                             android:textColor="@color/textcardColor"
                             android:textSize="14sp"
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/mo_re"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/arial"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -510,7 +221,7 @@
 
                         <ImageView
                             android:layout_width="80dp"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center_horizontal"
                             android:background="@drawable/branch"/>
 
@@ -520,8 +231,8 @@
                             android:text="Nearest Branch"
                             android:textColor="@color/textcardColor"
                             android:textSize="14sp"
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/mo_re"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/arial"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -550,18 +261,18 @@
 
                         <ImageView
                             android:layout_width="80dp"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center_horizontal"
                             android:background="@drawable/calculators"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Emi Calculate"
-                            android:layout_marginTop="8dp"
+                            android:text="Emi Calculator"
+                            android:layout_marginTop="13dp"
                             android:textColor="@color/textcardColor"
                             android:textSize="14sp"
-                            android:fontFamily="@font/mo_re"
+                            android:fontFamily="@font/arial"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -590,7 +301,7 @@
 
                         <ImageView
                             android:layout_width="80dp"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center_horizontal"
                             android:background="@drawable/calendar"/>
 
@@ -600,8 +311,8 @@
                             android:text="Current Dues"
                             android:textColor="@color/textcardColor"
                             android:textSize="14sp"
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/mo_re"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/arial"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -630,7 +341,7 @@
 
                         <ImageView
                             android:layout_width="80dp"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_gravity="center_horizontal"
                             android:background="@drawable/mobile"/>
 
@@ -638,10 +349,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Service Request"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="14dp"
                             android:textColor="@color/textcardColor"
                             android:textSize="14sp"
-                            android:fontFamily="@font/mo_re"
+                            android:fontFamily="@font/arial"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
