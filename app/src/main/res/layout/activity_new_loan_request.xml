@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/arial"
             android:paddingBottom="5dp"
-            android:text="Emi Selection"
+            android:text="New Loan Request"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>

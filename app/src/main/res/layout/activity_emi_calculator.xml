@@ -99,6 +99,7 @@
                         android:layout_marginBottom="10dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loan_amounts"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -111,6 +112,7 @@
                         android:layout_marginBottom="10dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_roi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -123,22 +125,24 @@
                         android:hint="Total Number Of  Month">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/total_number_month"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="15dp"
+                        android:id="@+id/btn_calculate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
                         android:padding="10dp"
-                    android:text="Calculate"
-                    android:textColor="@color/white"
-                    android:background="@drawable/shapelogin"
+                        android:background="@drawable/shapelogin"
+                        android:text="Calculate"
+                        android:textColor="@color/white"
                         android:backgroundTint="@color/usecolor"
-                    android:textStyle="bold"/>
+                        android:textStyle="bold" />
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>

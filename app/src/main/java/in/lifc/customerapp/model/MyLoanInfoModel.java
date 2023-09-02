@@ -142,7 +142,5 @@ public class MyLoanInfoModel {
         public void setDueEmiDate(String dueEmiDate) {
             this.dueEmiDate = dueEmiDate;
         }
-
     }
-
 }

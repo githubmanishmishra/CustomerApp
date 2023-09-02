@@ -67,21 +67,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Loan Number"
-                    android:layout_weight="1"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-            </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -98,21 +83,23 @@
                         android:layout_weight="1"/>
 
                 </LinearLayout>
+
                 <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Copy Type"
-                        android:layout_weight="1"/>
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
+                    android:text="Loan Number"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/et_loan_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
 
-                </LinearLayout>
+            </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -123,6 +110,7 @@
                     android:textSize="16sp" />
 
                 <EditText
+                    android:id="@+id/et_remark"
                     android:backgroundTint="@color/colorAccent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,6 +122,7 @@
                     android:scrollbars="vertical"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_submit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"

@@ -47,10 +47,12 @@ public class My_loan_info extends AppCompatActivity {
         getLoanInfo();
 
 
-        iv_back.setOnClickListener(new View.OnClickListener() {
+        iv_back.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 finish();
+
             }
         });
 
@@ -65,7 +67,8 @@ public class My_loan_info extends AppCompatActivity {
 
                 final MyLoanInfoModel allEvent = response.body();
                 if (allEvent != null) {
-                    for (int i = 0; i < allEvent.getData().size(); i++) {
+                    for (int i = 0; i < allEvent.getData().size(); i++)
+                    {
                         myLoanInfoModelList = allEvent.getData();
 
                     }

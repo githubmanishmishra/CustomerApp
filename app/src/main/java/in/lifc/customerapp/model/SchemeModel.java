@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class The_Slide_Items_Model_Class {
+public class SchemeModel {
 
     @SerializedName("status")
     @Expose
@@ -17,19 +17,11 @@ public class The_Slide_Items_Model_Class {
     @Expose
     private List<Datum> data;
 
-/*
-    public The_Slide_Items_Model_Class(List<Datum> data) {
-        this.data = data;
-    }
-*/
-
-
     public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status)
-    {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
@@ -48,30 +40,29 @@ public class The_Slide_Items_Model_Class {
     public void setData(List<Datum> data) {
         this.data = data;
     }
-
     public class Datum {
 
-        @SerializedName("offer_name")
+        @SerializedName("scheme_name")
         @Expose
-        private String offerName;
-        @SerializedName("offer_url")
+        private String schemeName;
+        @SerializedName("scheme_url")
         @Expose
-        private String offerUrl;
+        private String schemeUrl;
 
-        public String getOfferName() {
-            return offerName;
+        public String getSchemeName() {
+            return schemeName;
         }
 
-        public void setOfferName(String offerName) {
-            this.offerName = offerName;
+        public void setSchemeName(String schemeName) {
+            this.schemeName = schemeName;
         }
 
-        public String getOfferUrl() {
-            return offerUrl;
+        public String getSchemeUrl() {
+            return schemeUrl;
         }
 
-        public void setOfferUrl(String offerUrl) {
-            this.offerUrl = offerUrl;
+        public void setSchemeUrl(String schemeUrl) {
+            this.schemeUrl = schemeUrl;
         }
 
     }

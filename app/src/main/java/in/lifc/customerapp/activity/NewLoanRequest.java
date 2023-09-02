@@ -1,4 +1,5 @@
 package in.lifc.customerapp.activity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,24 +10,37 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import in.lifc.customerapp.R;
 import in.lifc.customerapp.model.LoanRequestModel;
 import in.lifc.customerapp.model.LoanTypeModel;
 import in.lifc.customerapp.retrofitservices.ApiClient;
 import in.lifc.customerapp.retrofitservices.ApiService;
 import in.lifc.customerapp.savedata.PrefConfig;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NewLoanRequest extends AppCompatActivity {
     private Spinner spLoanType;
     private PrefConfig prefConfig;
     String loanTypeValue;
+
+    ApiService service;
 
     private EditText etLoanAmount, etTenure, etPurposeOfLoan, etOfferAndScheme;
 
@@ -36,9 +50,7 @@ public class NewLoanRequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_loan_request);
-
         prefConfig = new PrefConfig(this);
-
         spLoanType = findViewById(R.id.sp_loan_type);
         etLoanAmount = findViewById(R.id.et_loan_amount);
         etTenure = findViewById(R.id.et_tenure);
@@ -67,7 +79,7 @@ public class NewLoanRequest extends AppCompatActivity {
                     String tenure = etTenure.getText().toString();
                     String purposeOfLoan = etPurposeOfLoan.getText().toString();
                     String offerAndScheme = etOfferAndScheme.getText().toString();
-                    getLoanRequest(loanAmount, tenure, purposeOfLoan,offerAndScheme);
+                    getLoanRequest(loanAmount, tenure, purposeOfLoan, offerAndScheme);
 
                 }
 
@@ -166,7 +178,8 @@ public class NewLoanRequest extends AppCompatActivity {
             requestFocus(etOfferAndScheme);
             valid = false;
 
-        } else {
+        }
+        else {
             etOfferAndScheme.setError(null);
         }
         return valid;
@@ -188,9 +201,13 @@ public class NewLoanRequest extends AppCompatActivity {
     private void getLoanRequest(String loanAmount, String tenure,
                                 String purposeOfLoan, String offerAndScheme) {
 
-        Log.d("sgdhgjkk>>>>>",prefConfig.readToken()+"1 "+loanTypeValue+"2 "+loanAmount+"3 "+tenure+"4 "+purposeOfLoan+"5 "+offerAndScheme);
-        ApiService service = ApiClient.getClient().create(ApiService.class);
-        Call<LoanRequestModel> call = service.loanRequest("Bearer "+prefConfig.readToken(),loanTypeValue,
+        Log.d("sgdhgjkk>>>>>",prefConfig.readToken()+"1 "+loanTypeValue+"2 "+loanAmount+"3 "+tenure+"4 "+purposeOfLoan+"5 "
+                +offerAndScheme);
+     //   ApiService service = ApiClient.getClient().create(ApiService.class);
+
+        getRetrofitServiceWork();
+
+        Call<LoanRequestModel> call = service.loanRequest(loanTypeValue,
                 loanAmount, tenure, purposeOfLoan, offerAndScheme);
         call.enqueue(new Callback<LoanRequestModel>()
         {
@@ -198,25 +215,21 @@ public class NewLoanRequest extends AppCompatActivity {
             public void onResponse(@NonNull Call<LoanRequestModel> call,
                                    @NonNull retrofit2.Response<LoanRequestModel> response)
             {
-                final LoanRequestModel allEvent = response.body();
-              //  List<String> listLoanRequest = new ArrayList<>();
+                LoanRequestModel allEvent = response.body();
 
                 if (allEvent != null) {
 
                    if(allEvent.getMessage().equalsIgnoreCase("Your are successfully applied for new Loan!")) {
-                         // startActivity(new Intent(NewLoanRequest.this,Dashboard_Customer.class));
                     Toast.makeText(NewLoanRequest.this, allEvent.getMessage(), Toast.LENGTH_SHORT).show();
-                    finish();
-                    }
-                   else
-                   {
+                       finish();
+
+                   }
+                   else {
                        Toast.makeText(NewLoanRequest.this, "Invalid Params", Toast.LENGTH_SHORT).show();
 
                    }
 
-                }
-                else
-                {
+                } else {
                     Toast.makeText(NewLoanRequest.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
 
                 }
@@ -230,6 +243,32 @@ public class NewLoanRequest extends AppCompatActivity {
                 Log.d("Error", t.getMessage());
             }
         });
+    }
+
+    private void getRetrofitServiceWork() {
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(
+                        chain -> {
+                            okhttp3.Request original = chain.request();
+                            // Request customization: add request headers
+                            okhttp3.Request.Builder requestBuilder = original.newBuilder()
+                                    .addHeader("Authorization", "Bearer " + prefConfig.readToken())
+                                    .method(original.method(), original.body());
+                            okhttp3.Request request = requestBuilder.build();
+                            return chain.proceed(request);
+                        })
+                .addInterceptor(interceptor).connectTimeout(60, TimeUnit.SECONDS).
+                readTimeout(60, TimeUnit.SECONDS).build();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://customerapp.iqhertz.com/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .client(okHttpClient)
+                .build();
+        service = retrofit.create(ApiService.class);
     }
 
 }
