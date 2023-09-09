@@ -33,13 +33,13 @@ public class Loan_type extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loan_type);
         prefConfig = new PrefConfig(this);
 
         ImageView iv_back = findViewById(R.id.back);
 
         recyclerView = findViewById(R.id.rv_loan_type);
+        super.onCreate(savedInstanceState);
         LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(Loan_type.this, LinearLayoutManager.VERTICAL, false);
         recyclerView.addItemDecoration(new DividerItemDecoration(Loan_type.this, DividerItemDecoration.VERTICAL));
         mLinearLayoutManager.setReverseLayout(true);

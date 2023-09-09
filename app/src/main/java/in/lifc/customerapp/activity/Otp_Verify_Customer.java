@@ -9,11 +9,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageButton;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.phone.SmsRetriever;
 
 import in.lifc.customerapp.R;
@@ -29,8 +34,9 @@ import retrofit2.Response;
 public class Otp_Verify_Customer extends AppCompatActivity {
     MySMSBroadcastReceiver mySMSBroadcastReceiver;
     PrefConfig prefConfig;
+    LinearLayout linearLayout;
    private EditText editTextotp1, editTextotp2, editTextotp3, editTextotp4,editTextotp5,editTextotp6;
-
+private ImageView imageView;
 
 
     @Override
@@ -38,7 +44,15 @@ public class Otp_Verify_Customer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_verify_customer);
 //        startSMSRetrieverClient(); // Already implemented above.
-         mySMSBroadcastReceiver = new MySMSBroadcastReceiver();
+
+
+        imageView= findViewById(R.id.imageView);
+        Glide.with(this).load(R.drawable.background).into(imageView);
+        linearLayout = findViewById(R.id.linearLayout);
+
+        //Glide.with(this).load(R.drawable.background).into(linearLayout);
+
+        mySMSBroadcastReceiver = new MySMSBroadcastReceiver();
         registerReceiver(mySMSBroadcastReceiver, new IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION));
         mySMSBroadcastReceiver.init(new MySMSBroadcastReceiver.OTPReceiveListener() {
             @Override
@@ -58,7 +72,7 @@ public class Otp_Verify_Customer extends AppCompatActivity {
         editTextotp4 = findViewById(R.id.edittext_otp4);
         editTextotp5 = findViewById(R.id.edittext_otp5);
         editTextotp6 = findViewById(R.id.edittext_otp6);
-        Button btn_otp =findViewById(R.id.btn_otpverify);
+        AppCompatImageButton btn_otp =findViewById(R.id.btn_otpverify);
         editTextotp1.addTextChangedListener(new TextWatcher() {
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {

@@ -32,21 +32,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class EmiCalculator extends AppCompatActivity {
     private TextInputEditText etLoanAmount,etRateofIntrest,etTotalNumberMonth;
-private AppCompatButton btnCalculate;
     private PrefConfig prefConfig;
     ApiService service;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emi_calculator);
-        etLoanAmount = findViewById(R.id.loan_amounts);
-        etRateofIntrest = findViewById(R.id.et_roi);
-        etTotalNumberMonth = findViewById(R.id.et_roi);
-        btnCalculate = findViewById(R.id.btn_calculate);
         prefConfig = new PrefConfig(this);
-  String LoanAmount = etLoanAmount.getText().toString();
-  String Roi = etRateofIntrest.getText().toString();
-  String Tenure = etTotalNumberMonth.getText().toString();
         ImageView iv_back = findViewById(R.id.iv_back);
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,37 +47,45 @@ private AppCompatButton btnCalculate;
                 finish();
             }
         });
+        etLoanAmount = findViewById(R.id.loan_amounts);
+        etRateofIntrest = findViewById(R.id.et_roi);
+        etTotalNumberMonth = findViewById(R.id.total_number_month);
+        AppCompatButton btnCalculate = findViewById(R.id.btn_calculate);
 
     btnCalculate.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v)
         {
+            String LoanAmount = etLoanAmount.getText().toString();
+            String Roi = etRateofIntrest.getText().toString();
+            String Tenure = etTotalNumberMonth.getText().toString();
             emiCalculator(LoanAmount,Roi,Tenure);
-
         }
     });
     }
     private void emiCalculator(String loanAmount,String roi,String tenure )
     {
         Log.d("sgdhgjkk>>>>>",prefConfig.readToken()+"1 "+loanAmount+"2 "+roi+"3 "+tenure+"4 ");
-
+        int loanAmounts = Integer.parseInt(loanAmount);
+        int rois = Integer.parseInt(roi);
+        int ternuress = Integer.parseInt(tenure);
         getRetrofitServiceWork();
-        ApiService service = ApiClient.getClient().create(ApiService.class);
-        Call<EmiCalModel> call = service.emiCalculator(loanAmount,roi,tenure);
+     //   ApiService service = ApiClient.getClient().create(ApiService.class);
+        Call<EmiCalModel> call = service.emiCalculator(loanAmounts,rois,ternuress);
         call.enqueue(new Callback<EmiCalModel>() {
             @Override
             public void onResponse(@NonNull Call<EmiCalModel> call, @NonNull Response<EmiCalModel> response) {
                 if (response.body() != null)
                 {
 
-              //      Toast.makeText(getApplicationContext(), "EMI Amount", Toast.LENGTH_SHORT).show();
-                  /*  Intent intent = new Intent(getApplicationContext(), Dashboard.class);
-                    startActivity(intent);*/
-                    if(response.body().getMessage().equalsIgnoreCase("EMI Amount")) {
-                        Toast.makeText(EmiCalculator.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                        finish();
+                   // if(response.body().getMessage().equalsIgnoreCase("EMI Amount")) {
+                    Toast.makeText(EmiCalculator.this, ""+response.body().getData(), Toast.LENGTH_SHORT).show();
+                    //    finish();
 
-                    }
+                //    }else {
+                 //       Toast.makeText(EmiCalculator.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+
+                 //   }
 
                 }
                 else
@@ -99,7 +99,7 @@ private AppCompatButton btnCalculate;
             public void onFailure(Call<EmiCalModel> call, Throwable t) {
 
                 // pDialog.dismiss();
-                //  Log.d("Error", t.getMessage());
+                  Log.d("Errorerty", t.getMessage());
             }
         });
 

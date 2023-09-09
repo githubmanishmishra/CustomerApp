@@ -3,15 +3,25 @@ package in.lifc.customerapp.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+
+import com.bumptech.glide.Glide;
+
 import in.lifc.customerapp.R;
 public class ChooseLanguageActivity extends AppCompatActivity {
     private AppCompatButton btnHindi, btnEnglish,btnLetsgo;
+    private ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_language);
+
+
+        imageView= findViewById(R.id.imageView);
+        Glide.with(this).load(R.drawable.background).into(imageView);
          btnHindi = findViewById(R.id.btn_hindi);
          btnEnglish = findViewById(R.id.btn_english);
          btnEnglish.setOnClickListener(v -> {

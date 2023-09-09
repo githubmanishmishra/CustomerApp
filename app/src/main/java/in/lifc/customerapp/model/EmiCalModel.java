@@ -12,7 +12,7 @@ public class EmiCalModel {
     private String message;
     @SerializedName("data")
     @Expose
-    private Integer data;
+    private int data;
 
     public Boolean getStatus() {
         return status;
@@ -30,11 +30,11 @@ public class EmiCalModel {
         this.message = message;
     }
 
-    public Integer getData() {
+    public int getData() {
         return data;
     }
 
-    public void setData(Integer data) {
+    public void setData(int data) {
         this.data = data;
     }
 

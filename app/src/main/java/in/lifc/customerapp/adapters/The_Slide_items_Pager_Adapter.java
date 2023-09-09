@@ -19,8 +19,8 @@ import in.lifc.customerapp.model.The_Slide_Items_Model_Class;
 
 public class The_Slide_items_Pager_Adapter extends PagerAdapter {
 
-    private Context mContext;
-    private List<The_Slide_Items_Model_Class.Datum> theSlideItemsModelClassList;
+    private final Context mContext;
+    private final List<The_Slide_Items_Model_Class.Datum> theSlideItemsModelClassList;
 
     public The_Slide_items_Pager_Adapter(Context Mcontext, List<The_Slide_Items_Model_Class.Datum> theSlideItemsModelClassList) {
         this.mContext = Mcontext;

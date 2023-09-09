@@ -14,6 +14,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel;
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,9 +33,8 @@ import retrofit2.Callback;
 public class OfferAndSchemeActivity extends AppCompatActivity {
 
     private List<The_Slide_Items_Model_Class.Datum> listItems = new ArrayList<>();
-    ;
-    private ViewPager page;
-    private TabLayout tabLayout;
+    private ImageCarousel page;
+//    private TabLayout tabLayout;
 
     PrefConfig prefConfig;
 
@@ -54,7 +56,8 @@ public class OfferAndSchemeActivity extends AppCompatActivity {
         });
 
         page = findViewById(R.id.my_pager);
-        tabLayout = findViewById(R.id.my_tablayout);
+        page.registerLifecycle(getLifecycle());
+        //tabLayout = findViewById(R.id.my_tablayout);
         noScheme = findViewById(R.id.tv_no_scheme);
 
         getBannerData();
@@ -77,20 +80,25 @@ public class OfferAndSchemeActivity extends AppCompatActivity {
 
                 final The_Slide_Items_Model_Class allEvent = response.body();
                 if (allEvent != null) {
+                    List<CarouselItem> list = new ArrayList<>();
+
                     for (int i = 0; i < allEvent.getData().size(); i++) {
                         listItems = allEvent.getData();
+                        list.add(new CarouselItem(listItems.get(i).getOfferUrl()));
 
                     }
 
                     // Make a copy of the slides you'll be presenting.
 
-                    The_Slide_items_Pager_Adapter itemsPager_adapter = new The_Slide_items_Pager_Adapter(OfferAndSchemeActivity.this, listItems);
-                    page.setAdapter(itemsPager_adapter);
+                  //  The_Slide_items_Pager_Adapter itemsPager_adapter = new The_Slide_items_Pager_Adapter(OfferAndSchemeActivity.this, listItems);
+                  //  page.setAdapter(itemsPager_adapter);
 
                     // The_slide_timer
 //        java.util.Timer timer = new java.util.Timer();
 //        timer.scheduleAtFixedRate(new The_slide_timer(),2000,3000);
-                    tabLayout.setupWithViewPager(page, true);
+              //      tabLayout.setupWithViewPager(page, true);
+
+                    page.setData(list);
 
 
                 } else {
@@ -110,20 +118,4 @@ public class OfferAndSchemeActivity extends AppCompatActivity {
 
     }
 
-    /*public class The_slide_timer extends TimerTask {
-        @Override
-        public void run() {
-
-            OfferAndSchemeActivity.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    if (page.getCurrentItem()< listItems.size()-1) {
-                        page.setCurrentItem(page.getCurrentItem()+1);
-                    }
-                    else
-                        page.setCurrentItem(0);
-                }
-            });
-        }
-    }*/
 }

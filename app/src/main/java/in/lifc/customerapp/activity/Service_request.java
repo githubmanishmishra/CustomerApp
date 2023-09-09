@@ -1,21 +1,25 @@
 package in.lifc.customerapp.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatSpinner;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import in.lifc.customerapp.R;
 import in.lifc.customerapp.model.CustomerServiceRequest;
@@ -23,16 +27,21 @@ import in.lifc.customerapp.model.RequestDropdownModel;
 import in.lifc.customerapp.retrofitservices.ApiClient;
 import in.lifc.customerapp.retrofitservices.ApiService;
 import in.lifc.customerapp.savedata.PrefConfig;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Service_request extends AppCompatActivity {
     private PrefConfig prefConfig;
-    private Spinner spServiceType;
+    private AppCompatSpinner spServiceType;
     private String serviceRequestValue;
    private AppCompatButton btnSubmit;
-private EditText etRemark,etLoanNumber;
+private EditText etRemark, etLoanNumber;
+    ApiService service;//ALT+CTRL
 
     List<RequestDropdownModel.Data> dataList = new ArrayList<>();
 
@@ -75,6 +84,8 @@ private EditText etRemark,etLoanNumber;
             public void onResponse(Call<RequestDropdownModel> call, Response<RequestDropdownModel> response) {
                 List<String> listServiceType = new ArrayList<>();
                 final RequestDropdownModel allevent = response.body();
+                listServiceType.add(0,"Select  Service Type");
+
                 if (allevent != null) {
                     for (int i = 0; i < allevent.getData().size(); i++) {
                         dataList = allevent.getData();
@@ -108,10 +119,9 @@ private EditText etRemark,etLoanNumber;
     }
     private void CustServiceRequest(String loanNumber,String remark)
     {
+        //   ApiService service = ApiClient.getClient().create(ApiService.class);
 
-
-
-        ApiService service = ApiClient.getClient().create(ApiService.class);
+        getRetrofitServiceWork();
 
         Call<CustomerServiceRequest> call = service.CustServiceRequest("Bearer "+prefConfig.readToken(),"",loanNumber,remark);
         call.enqueue(new Callback<CustomerServiceRequest>() {
@@ -131,9 +141,35 @@ private EditText etRemark,etLoanNumber;
             public void onFailure(Call<CustomerServiceRequest> call, Throwable t) {
 
                 // pDialog.dismiss();
-                //  Log.d("Error", t.getMessage());
+                Log.d("Errormmg", t.getMessage());
             }
         });
+    }
+
+    private void getRetrofitServiceWork() {
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(
+                        chain -> {
+                            okhttp3.Request original = chain.request();
+                            // Request customization: add request headers
+                            okhttp3.Request.Builder requestBuilder = original.newBuilder()
+                                    .addHeader("Authorization", "Bearer " + prefConfig.readToken())
+                                    .method(original.method(), original.body());
+                            okhttp3.Request request = requestBuilder.build();
+                            return chain.proceed(request);
+                        })
+                .addInterceptor(interceptor).connectTimeout(60, TimeUnit.SECONDS).
+                readTimeout(60, TimeUnit.SECONDS).build();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://customerapp.iqhertz.com/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .client(okHttpClient)
+                .build();
+        service = retrofit.create(ApiService.class);
     }
 
 }

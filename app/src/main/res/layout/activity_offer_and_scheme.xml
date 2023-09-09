@@ -87,15 +87,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp">
 
-                <androidx.viewpager.widget.ViewPager
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/my_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:showTopShadow="true"
+                    app:topShadowAlpha="0.6"
+                    app:topShadowHeight="32dp"
+
+                    app:showBottomShadow="true"
+                    app:bottomShadowAlpha="0.6"
+                    app:bottomShadowHeight="64dp"
+                    app:autoPlay="true"
+                    app:autoPlayDelay="3000"
+                    app:infiniteCarousel="true"
+                    app:touchToPause="true" />
+
+                <!--<androidx.viewpager.widget.ViewPager
                     android:id="@+id/my_pager"
                     android:layout_width="0dp"
                     android:layout_height="245dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />-->
 
+<!--
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/my_tablayout"
                     android:layout_width="match_parent"
@@ -106,6 +127,7 @@
                     app:tabBackground="@drawable/indicator_selector"
                     app:tabGravity="center"
                     app:tabIndicatorHeight="0dp" />
+-->
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView

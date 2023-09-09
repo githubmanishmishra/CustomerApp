@@ -11,21 +11,31 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import in.lifc.customerapp.R;
 import in.lifc.customerapp.model.MyLoanInfoModel;
 import in.lifc.customerapp.retrofitservices.ApiClient;
 import in.lifc.customerapp.retrofitservices.ApiService;
 import in.lifc.customerapp.savedata.PrefConfig;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyLoanInfoDetailActivity extends AppCompatActivity {
     private TextView etLoanProduct, etLoanNumber, etDisbursementStatus, etLoanAmount,
             etTotalEmiPaid, etTenure, etDueEmiDate;
     private PrefConfig prefConfig;
+
+    ApiService service;
 
     List<MyLoanInfoModel.Datum> myLoanInfoModelList = new ArrayList<>();
 
@@ -56,7 +66,8 @@ public class MyLoanInfoDetailActivity extends AppCompatActivity {
 
     private void getLoanType() {
         ApiService service = ApiClient.getClient().create(ApiService.class);
-        Call<MyLoanInfoModel> call = service.getLoanInfo("Bearer " + prefConfig.readToken());
+//        getRetrofitServiceWork();
+        Call<MyLoanInfoModel> call = service.getLoanInfo("Bearer "+prefConfig.readToken());
         call.enqueue(new Callback<MyLoanInfoModel>() {
             @Override
             public void onResponse(@NonNull Call<MyLoanInfoModel> call, @NonNull retrofit2.Response<MyLoanInfoModel> response) {
@@ -81,6 +92,31 @@ public class MyLoanInfoDetailActivity extends AppCompatActivity {
                 Log.d("Error", t.getMessage());
             }
         });
+    }
+    private void getRetrofitServiceWork() {
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(
+                        chain -> {
+                            okhttp3.Request original = chain.request();
+                            // Request customization: add request headers
+                            okhttp3.Request.Builder requestBuilder = original.newBuilder()
+                                    .addHeader("Authorization", "Bearer " + prefConfig.readToken())
+                                    .method(original.method(), original.body());
+                            okhttp3.Request request = requestBuilder.build();
+                            return chain.proceed(request);
+                        })
+                .addInterceptor(interceptor).connectTimeout(60, TimeUnit.SECONDS).
+                readTimeout(60, TimeUnit.SECONDS).build();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://customerapp.iqhertz.com/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .client(okHttpClient)
+                .build();
+        service = retrofit.create(ApiService.class);
     }
 
 }

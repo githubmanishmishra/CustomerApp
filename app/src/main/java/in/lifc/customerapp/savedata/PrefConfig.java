@@ -8,8 +8,8 @@ import in.lifc.customerapp.R;
 
 public class PrefConfig {
 
-    private SharedPreferences sharedPreferences;
-    private Context context;
+    private final SharedPreferences sharedPreferences;
+    private final Context context;
 
     public PrefConfig(Context context) {
         this.context = context;

@@ -14,7 +14,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatSpinner;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -36,13 +38,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NewLoanRequest extends AppCompatActivity {
-    private Spinner spLoanType;
+    private AppCompatSpinner  spLoanType;
     private PrefConfig prefConfig;
     String loanTypeValue;
 
     ApiService service;
 
-    private EditText etLoanAmount, etTenure, etPurposeOfLoan, etOfferAndScheme;
+    private TextInputEditText etLoanAmount, etTenure, etPurposeOfLoan, etOfferAndScheme;
 
     List<LoanTypeModel.Data> dataList = new ArrayList<>();
 
@@ -96,7 +98,7 @@ public class NewLoanRequest extends AppCompatActivity {
             public void onResponse(@NonNull Call<LoanTypeModel> call, @NonNull retrofit2.Response<LoanTypeModel> response) {
                 final LoanTypeModel allEvent = response.body();
                 List<String> listLoanType = new ArrayList<>();
-
+                listLoanType.add(0,"Select  Loan Type");
                 if (allEvent != null) {
                     for (int i = 0; i < allEvent.getData().size(); i++) {
                         dataList = allEvent.getData();
@@ -218,8 +220,7 @@ public class NewLoanRequest extends AppCompatActivity {
                 LoanRequestModel allEvent = response.body();
 
                 if (allEvent != null) {
-
-                   if(allEvent.getMessage().equalsIgnoreCase("Your are successfully applied for new Loan!")) {
+                   if(allEvent.getMessage().equalsIgnoreCase("Your are successfully applied a new Loan!")) {
                     Toast.makeText(NewLoanRequest.this, allEvent.getMessage(), Toast.LENGTH_SHORT).show();
                        finish();
 

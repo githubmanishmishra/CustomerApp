@@ -13,5 +13,17 @@
     <dimen name="padding_8">8dp</dimen>
     <dimen name="radius_32">32dp</dimen>
     <dimen name="nav_header_height">190dp</dimen>
+    <dimen name="margin_left_16">16dp</dimen>
+    <dimen name="margin_right_16">16dp</dimen>
+    <dimen name="margin_top_16">16dp</dimen>
+    <dimen name="margin_bottom_16">16dp</dimen>
+    <dimen name="margin_top_8">8dp</dimen>
+    <dimen name="margin_bottom_8">8dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="text_20">20dp</dimen>
+    <dimen name="text_18">18dp</dimen>
+    <dimen name="dimen_1">1dp</dimen>
+
+
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
 </resources>

@@ -63,7 +63,7 @@ public class MyLoanInfoModel {
         private String loanAmount;
         @SerializedName("paidEmi")
         @Expose
-        private Integer paidEmi;
+        private String paidEmi;
         @SerializedName("tenure")
         @Expose
         private String tenure;
@@ -99,6 +99,7 @@ public class MyLoanInfoModel {
             return loanNo;
         }
 
+
         public void setLoanNo(String loanNo) {
             this.loanNo = loanNo;
         }
@@ -119,11 +120,11 @@ public class MyLoanInfoModel {
             this.loanAmount = loanAmount;
         }
 
-        public Integer getPaidEmi() {
+        public String getPaidEmi() {
             return paidEmi;
         }
 
-        public void setPaidEmi(Integer paidEmi) {
+        public void setPaidEmi(String paidEmi) {
             this.paidEmi = paidEmi;
         }
 
@@ -142,5 +143,6 @@ public class MyLoanInfoModel {
         public void setDueEmiDate(String dueEmiDate) {
             this.dueEmiDate = dueEmiDate;
         }
+
     }
 }

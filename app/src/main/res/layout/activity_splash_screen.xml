@@ -1,115 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F0FFFF"
-    android:orientation="vertical"
-    tools:context=".activity.LoginActivity">
-    <RelativeLayout
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <View
-            android:id="@+id/first_line"
-            android:layout_width="20dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/line"
-            android:backgroundTint="#3D0506"/>
-        <View
-            android:id="@+id/second_line"
-            android:layout_width="20dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/first_line"
-            android:background="@drawable/line"
-            android:backgroundTint="#00FFFF" />
-        <View
-            android:id="@+id/third_line"
-            android:layout_width="20dp"
-            android:layout_height="250dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/second_line"
-            android:background="@drawable/line"
-            android:backgroundTint="#00FF00"/>
-        <View
-            android:id="@+id/fourth_line"
-            android:layout_width="20dp"
-            android:layout_height="200dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/third_line"
-            android:background="@drawable/line"
-            android:backgroundTint="#00008B" />
-        <View
-            android:id="@+id/fifth_line"
-            android:layout_width="20dp"
-            android:layout_height="220dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/fourth_line"
-            android:background="@drawable/line"
-            android:backgroundTint="#FF00FF" />
-        <View
-            android:id="@+id/sixth_line"
-            android:layout_width="20dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/fifth_line"
-            android:background="@drawable/line"
-            android:backgroundTint="#008000" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/a"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/logo" />
-
-        <TextView
-            android:id="@+id/tagLine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="Laxmi India Finance Pvt Ltd."
-            android:layout_below="@+id/a"
-            android:textColor="@color/black"
-            android:textSize="26sp"
-            app:fontFamily="ariel" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
-
-            <TextView
-                android:id="@+id/tagLine2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Sapne Dekho Bade Dekho"
-                android:textColor="#008000"
-                android:textSize="24sp"
-                app:fontFamily="@font/arial" />
-
-            <TextView
-                android:id="@+id/tagLine3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Unhe Hamare sath Pura Hote Dekho"
-                android:textColor="#008000"
-                android:textSize="20sp"
-                android:layout_below="@+id/tagLine2"
-                android:layout_marginBottom="30dp"
-                app:fontFamily="@font/arial"/>
-        </RelativeLayout>
-    </RelativeLayout>
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent"/>
 </LinearLayout>
-
-<!--
-FontStyle change kr lena.... dusra text color change kr lena tagline 2 aur 3 ka -->
